@@ -73,3 +73,24 @@ jobs:
         run: npm ci
       - name: Run end-to-end tests
         run: npm run test:e2e
+  deploy:
+    name: Deploy
+    if: github.ref == 'refs/heads/main'
+    needs: [ build-web ]
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Download
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
+      - name: Vercel Action
+        uses: amondnet/vercel-action@v20.0.0
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-comment: false
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-args: '--prod'
