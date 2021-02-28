@@ -30,7 +30,7 @@ Example of how to deploy a [NestJS](https://nestjs.com/) app to [Vercel](https:/
 }
 ```
 
-3. Run `vercel` to deploy your app. 
+3. Run `vercel` ([Vercel CLI Reference](https://vercel.com/docs/cli)) from the root of your project directory to deploy your app.
 Once set up, a new `.vercel` directory will be added to your directory. 
 The `.vercel` directory contains both the organization and project id of your project.
 
