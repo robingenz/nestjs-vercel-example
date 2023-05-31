@@ -1,6 +1,6 @@
 # nestjs-vercel-example
 
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/robingenz/nestjs-vercel-example/CI/main)](https://github.com/robingenz/nestjs-vercel-example/actions?query=workflow%3ACI)
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/robingenz/nestjs-vercel-example/ci.yml?branch=main)](https://github.com/robingenz/nestjs-vercel-example/actions?query=workflow%3ACI)
 
 Example of how to deploy a [NestJS](https://nestjs.com/) app to [Vercel](https://vercel.com/). 
 
